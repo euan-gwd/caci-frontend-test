@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import logo from "../../assets/Star_Wars_Logo.svg";
+import { GiTrophyCup } from "react-icons/gi";
 
 const Header = () => {
   return (
@@ -16,7 +17,7 @@ const Header = () => {
           This is a test of the SWAPI API using React, React Query, Styled
           components and React Router, and deployed to Netlify. Results are
           sorted by crew size, and the ships with the largest crew are marked
-          with a trophy icon.
+          with a <GiTrophyCup />.
         </StyledDesc>
       </StyledDescWrapper>
     </StyledHeader>
