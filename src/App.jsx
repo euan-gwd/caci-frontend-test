@@ -1,7 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { createGlobalStyle } from "styled-components";
+
 import Home from "./components/Home";
+import SpaceshipDetails from "./components/spaceshipSection/SpaceshipDetails";
+import Header from "./components/header/Header";
 
 const queryclient = new QueryClient({
   defaultOptions: {
@@ -16,8 +19,10 @@ function App() {
     <BrowserRouter>
       <QueryClientProvider client={queryclient}>
         <GlobalStyle />
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/details/:id" element={<SpaceshipDetails />} />
           <Route path="*" element={<h1>Not Found</h1>} />
         </Routes>
       </QueryClientProvider>
